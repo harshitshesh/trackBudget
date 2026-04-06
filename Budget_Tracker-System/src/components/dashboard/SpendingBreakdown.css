@@ -1,0 +1,151 @@
+.spending-breakdown {
+  padding: var(--space-6);
+  min-height: 420px;
+}
+
+.spending-breakdown__header {
+  margin-bottom: var(--space-4);
+}
+
+.spending-breakdown__title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.spending-breakdown__subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.spending-breakdown__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.spending-breakdown__chart {
+  width: 100%;
+  position: relative;
+}
+
+.spending-breakdown__center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.spending-breakdown__center-text .label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: -2px;
+}
+
+.spending-breakdown__center-text .value {
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.spending-breakdown__legend {
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+.spending-legend {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.spending-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.spending-legend__item .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.spending-legend__item .name {
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.spending-legend__item .value {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.spending-legend__more {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border-color);
+  width: 100%;
+  text-align: center;
+}
+
+.empty-chart-msg {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+}
+
+/* Custom Tooltip Specific for Pie Chart */
+.chart-tooltip--pie {
+  padding: var(--space-2) var(--space-4);
+}
+
+.chart-tooltip--pie .chart-tooltip__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.chart-tooltip--pie .emoji {
+  font-size: var(--font-size-lg);
+}
+
+.chart-tooltip--pie .label {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chart-tooltip--pie .chart-tooltip__value-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-top: var(--space-1);
+}
+
+.chart-tooltip--pie .value {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.chart-tooltip--pie .percentage {
+  color: var(--color-primary);
+  font-weight: 700;
+}

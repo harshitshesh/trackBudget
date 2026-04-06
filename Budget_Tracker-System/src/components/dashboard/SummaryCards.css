@@ -1,0 +1,92 @@
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.summary-card__icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-card__icon-wrapper--primary { background-color: var(--color-primary-bg); color: var(--color-primary); }
+.summary-card__icon-wrapper--income { background-color: var(--color-income-bg); color: var(--color-income); }
+.summary-card__icon-wrapper--expense { background-color: var(--color-expense-bg); color: var(--color-expense); }
+.summary-card__icon-wrapper--warning { background-color: var(--color-warning-bg); color: var(--color-warning); }
+
+.summary-card__trend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.summary-card__trend--up { color: var(--color-income); background-color: var(--color-income-bg); }
+.summary-card__trend--down { color: var(--color-expense); background-color: var(--color-expense-bg); }
+
+.summary-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.summary-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.summary-card__value {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+/* Background accents for depth */
+.summary-card::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.summary-card--primary::after { background-color: var(--color-primary); }
+.summary-card--income::after { background-color: var(--color-income); }
+.summary-card--expense::after { background-color: var(--color-expense); }
+.summary-card--warning::after { background-color: var(--color-warning); }
+
+@media (max-width: 480px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+}

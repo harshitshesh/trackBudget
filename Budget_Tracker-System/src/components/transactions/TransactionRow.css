@@ -1,0 +1,77 @@
+.transaction-row {
+  border-bottom: 1px solid var(--border-color-light);
+  transition: background-color var(--transition-fast);
+}
+
+.transaction-row:hover {
+  background-color: var(--bg-hover);
+}
+ 
+.transaction-row td {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.transaction-row__date {
+  color: var(--text-tertiary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.transaction-row__description {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.description-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.type-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.type-icon--income { background-color: var(--color-income-bg); color: var(--color-income); }
+.type-icon--expense { background-color: var(--color-expense-bg); color: var(--color-expense); }
+
+.category-emoji {
+  margin-right: var(--space-2);
+}
+
+.transaction-row__amount {
+  font-weight: 700;
+  font-family: 'JetBrains Mono', 'Courier New', monospace; /* Monospace for amounts if possible */
+  white-space: nowrap;
+}
+
+.amount--income { color: var(--color-income); }
+.amount--expense { color: var(--color-expense); }
+
+.actions-wrapper {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.btn-action--edit:hover { color: var(--color-primary); }
+.btn-action--delete:hover { color: var(--color-expense); }
+
+.text-muted {
+  font-size: var(--font-size-xs);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .transaction-row td:nth-child(1),
+  .transaction-row td:nth-child(3) {
+    display: none; /* Hide date/category on small screens */
+  }
+}

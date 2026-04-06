@@ -1,0 +1,100 @@
+.transaction-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+ 
+.filters-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.type-toggle {
+  display: flex;
+  background-color: var(--bg-tertiary);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.type-toggle__btn {
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  transition: all var(--transition-fast);
+}
+
+.type-toggle__btn:hover {
+  color: var(--text-secondary);
+}
+
+.type-toggle__btn--active {
+  background-color: var(--bg-card);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-select {
+  appearance: none;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-10) var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.filter-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-bg);
+}
+
+.select-chevron {
+  position: absolute;
+  right: var(--space-3);
+  pointer-events: none;
+  color: var(--text-tertiary);
+}
+
+.btn--clear-filters {
+  color: var(--color-expense);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.search-filter-mobile {
+  display: none; /* Only mobile view search if not header search */
+  align-items: center;
+  gap: var(--space-3);
+  background-color: var(--bg-tertiary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.search-filter-mobile input {
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-sm);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .search-filter-mobile {
+    display: flex;
+  }
+}

@@ -1,0 +1,90 @@
+.balance-trend {
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.balance-trend__header {
+  margin-bottom: var(--space-6);
+}
+
+.balance-trend__title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.balance-trend__subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.balance-trend__chart-container {
+  height: 300px;
+  width: 100%;
+}
+
+/* Recharts Overrides and Tooltip Styling */
+.chart-tooltip {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-lg);
+  min-width: 180px;
+}
+
+.chart-tooltip__label {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.chart-tooltip__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.chart-tooltip__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.chart-tooltip__item .name {
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.chart-tooltip__item .value {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chart-tooltip__divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: var(--space-2) 0;
+}
+
+.chart-tooltip__item--total .name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chart-tooltip__item--total .value {
+  color: var(--color-primary);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+.dot--income { background-color: var(--color-income); }
+.dot--expense { background-color: var(--color-expense); }

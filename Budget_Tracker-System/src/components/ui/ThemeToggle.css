@@ -1,0 +1,24 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+}
+
+.theme-toggle__icon {
+  transition: transform var(--transition-base), color var(--transition-base);
+}
+
+.theme-toggle__icon--moon {
+  color: var(--text-secondary);
+}
+
+.theme-toggle__icon--sun {
+  color: var(--color-warning);
+}
+
+.theme-toggle:hover .theme-toggle__icon {
+  transform: rotate(15deg);
+}
